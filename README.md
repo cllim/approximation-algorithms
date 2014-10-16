@@ -1,6 +1,6 @@
 Approximation Algorithms
 ========================
-The project currently contains various approximation algorithms for the weighted set cover problem. Algorithms for other NP-hard problems will be uploaded over time.
+The project currently contains various approximation algorithms for the weighted set cover problem. 
 
 Set Cover
 ---------
@@ -51,7 +51,7 @@ cd approximation-algorithms/set-cover
 make
 set-cover "option"
 ```
-Replace "option" with "LP-rounding", "dual_rounding", "primal_dual", "greedy", or "exact" to invoke the corresponding algorithm (without the inverted commas).
+Replace "option" with "LP-rounding", "dual_rounding", "primal_dual", "greedy", or "exact" to invoke the corresponding algorithm (without the inverted commas). Defaults to the exact MIP solver if nothing is specified.
 
 To run the test file instead, do
 ```
