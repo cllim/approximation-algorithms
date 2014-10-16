@@ -63,5 +63,13 @@ License
 -------
 MIT
 
+References
+----------
+Williamson, David P., and David B. Shmoys. *The design of approximation algorithms*. Cambridge University Press, 2011.
+
+Vazirani, Vijay V. *Approximation algorithms*. Springer, 2001.
+
+Note: Free electronic copy of these books could be found online
+
 [GNU Linear Programming Kit]:https://www.gnu.org/software/glpk/ 
 [Catch]:https://github.com/philsquared/Catch
