@@ -37,9 +37,11 @@ The ground element ID is numbered as 1,2,...,10 in the example.
 
 Dependencies
 -----------
-The program uses the linear programming and mixed-integer programming solver from the [GNU Linear Programming Kit].
+The program uses the linear programming and mixed-integer programming solver from the [GNU Linear Programming Kit] \(GLPK\).
 
 Testing is done using [Catch].
+
+GLPK is needed for the program to execute correctly while both GLPK and Catch are needed for the test file.
 
 Installation
 -----------
@@ -47,6 +49,14 @@ Installation
 git clone https://github.com/cllim/approximation-algorithms/
 cd approximation-algorithms/set-cover
 make
+set-cover "option"
+```
+Replace "option" with "LP-rounding", "dual_rounding", "primal_dual", "greedy", or "exact" to invoke the corresponding algorithm (without the inverted commas).
+
+To run the test file instead, do
+```
+make test
+test
 ```
 
 License
