@@ -1,9 +1,12 @@
 EXECUTABLE = set-cover
 CC = g++ -std=c++11 
 CFLAGS = -Wall
-SOURCE = element.cpp set.cpp set-cover.cpp main.cpp
+COMMON = element.cpp set.cpp set-cover.cpp
+SOURCE =  $(COMMON) main.cpp
+TEST = $(COMMON) test-set-cover.cpp
 DEPS = element.h set.h set-cover.h 
 OBJ = $(SOURCE:.cpp=.o)
+OBJ_TEST = $(TEST:.cpp=.o)
 
 all: $(EXECUTABLE)
 
@@ -13,7 +16,10 @@ all: $(EXECUTABLE)
 $(EXECUTABLE): $(OBJ)
 	$(CC) -L/usr/local/lib -o $@ $^ $(CFLAGS) -lglpk
 
+test: $(OBJ_TEST)
+	$(CC) -I/usr/local/include -L/usr/local/lib -o $@ $^ $(CFLAGS) -lglpk
+
 .PHONY: clean
 
 clean:
-	rm -f *.o $(EXECUTABLE)
+	rm -f *.o $(EXECUTABLE) test
